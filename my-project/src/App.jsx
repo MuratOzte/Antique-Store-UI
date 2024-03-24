@@ -2,6 +2,7 @@ import Nav from './Components/nav/Nav';
 import MobileLinks from './Components/nav/MobileLinks';
 import Hero from './Components/hero/Hero';
 import Selections from './Components/Selections/Selections';
+import RecentlyAdded from './Components/RecentlyAdded/RecentlyAdded';
 
 function App() {
     return (
@@ -31,9 +32,11 @@ function App() {
                     scrollSnapStop: 'always',
                     height: '100vh',
                     width: '100%',
+                    paddingTop:'2px'
                 }}
             >
                 <Selections />
+                <RecentlyAdded />
             </div>
             <div
                 style={{
