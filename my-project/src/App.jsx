@@ -1,5 +1,6 @@
 import Nav from './Components/nav/Nav';
 import MobileLinks from './Components/nav/MobileLinks';
+import Hero from './Components/hero/Hero';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
             >
                 <Nav />
                 <MobileLinks />
+                <Hero />
             </div>
             <div
                 style={{
@@ -29,9 +31,7 @@ function App() {
                     height: '100vh',
                     width: '100%',
                 }}
-            >
-                <h1>Hello, World!</h1>
-            </div>
+            ></div>
             <div
                 style={{
                     scrollSnapAlign: 'center',
