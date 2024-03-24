@@ -4,6 +4,7 @@ import Hero from './Components/hero/Hero';
 import Selections from './Components/Selections/Selections';
 import RecentlyAdded from './Components/RecentlyAdded/RecentlyAdded';
 import TopCategories from './Components/topCategories/TopCategories';
+import FeedBack from './Components/feedback/Feedback';
 
 function App() {
     return (
@@ -33,7 +34,7 @@ function App() {
                     scrollSnapStop: 'always',
                     height: '100vh',
                     width: '100%',
-                    paddingTop:'2px'
+                    paddingTop: '2px',
                 }}
             >
                 <Selections />
@@ -57,7 +58,7 @@ function App() {
                     width: '100%',
                 }}
             >
-                <h1>Hello, World!</h1>
+                <FeedBack />
             </div>
             <div
                 style={{
