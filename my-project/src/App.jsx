@@ -3,6 +3,7 @@ import MobileLinks from './Components/nav/MobileLinks';
 import Hero from './Components/hero/Hero';
 import Selections from './Components/Selections/Selections';
 import RecentlyAdded from './Components/RecentlyAdded/RecentlyAdded';
+import TopCategories from './Components/topCategories/TopCategories';
 
 function App() {
     return (
@@ -46,7 +47,7 @@ function App() {
                     width: '100%',
                 }}
             >
-                <h1>Hello, World!</h1>
+                <TopCategories />
             </div>
             <div
                 style={{

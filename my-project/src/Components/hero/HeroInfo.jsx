@@ -1,7 +1,28 @@
-import vase from "../../assets/vase.svg";
-import cup from "../../assets/cup.svg";
-import building from "../../assets/building.svg";
-import share from "../../assets/share.svg";
+import vase from '../../assets/vase.svg';
+import cup from '../../assets/cup.svg';
+import building from '../../assets/building.svg';
+import share from '../../assets/share.svg';
+
+import $ from 'jquery';
+
+const data1 = [
+    {
+        year: 1322,
+        bids: 29,
+        origin: 'China',
+    },
+];
+
+$(document).ready(function () {
+    for (let i = 0; i < data1.length; i++) {
+        const item = data1[i];
+        for (const key in item) {
+            if (item.hasOwnProperty(key)) {
+                $(`#${key}`).text(item[key]);
+            }
+        }
+    }
+});
 
 const HeroInfo = () => {
     return (
