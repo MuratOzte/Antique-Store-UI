@@ -1,5 +1,5 @@
-import './App.css';
 import Nav from './Components/nav/Nav';
+import MobileLinks from './Components/nav/MobileLinks';
 
 function App() {
     return (
@@ -20,6 +20,7 @@ function App() {
                 }}
             >
                 <Nav />
+                <MobileLinks />
             </div>
             <div
                 style={{

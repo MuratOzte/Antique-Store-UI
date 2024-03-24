@@ -1,16 +1,6 @@
-import './Nav.scss';
-
-const Nav = () => {
+const MobileLinks = () => {
     return (
-        <nav>
-            <a>
-                Siboria<span>.</span>
-            </a>
-            <div className="menu">
-                <span className="line1"></span>
-                <span className="line2"></span>
-                <span className="line3"></span>
-            </div>
+        <div className="mobile-links">
             <ul>
                 <li>
                     <a className="is-active" href="#">
@@ -30,9 +20,8 @@ const Nav = () => {
                     <a href="#">Blog</a>
                 </li>
             </ul>
-            <button>Our Collections</button>
-        </nav>
+        </div>
     );
 };
 
-export default Nav;
+export default MobileLinks;
