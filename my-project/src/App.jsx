@@ -1,6 +1,7 @@
 import Nav from './Components/nav/Nav';
 import MobileLinks from './Components/nav/MobileLinks';
 import Hero from './Components/hero/Hero';
+import Selections from './Components/Selections/Selections';
 
 function App() {
     return (
@@ -31,7 +32,9 @@ function App() {
                     height: '100vh',
                     width: '100%',
                 }}
-            ></div>
+            >
+                <Selections />
+            </div>
             <div
                 style={{
                     scrollSnapAlign: 'center',
