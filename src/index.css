@@ -5,3 +5,13 @@ body {
     background-color: #fafafa;
     overflow-x: hidden;
 }
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ff8032;
+    border-radius: 12px;
+}
