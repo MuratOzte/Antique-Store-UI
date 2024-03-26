@@ -5,21 +5,21 @@ import send from '../../assets/subscribe/send.svg';
 
 const Subscribe = () => {
     return (
-        <div class="subscribe">
-            <div class="text-section">
+        <div className="subscribe">
+            <div className="text-section">
                 <h1>Subscribe our newletter</h1>
                 <p>
                     Reciev latest news, update, and many other things every
                     week.
                 </p>
-                <div class="custom-input">
+                <div className="custom-input">
                     <input type="text" placeholder="Enter Your email adress" />
-                    <div class="send-button">
+                    <div className="send-button">
                         <img src={send} alt="send" />
                     </div>
                 </div>
             </div>
-            <div class="image-section">
+            <div className="image-section">
                 <img src={gramaphone} />
             </div>
         </div>

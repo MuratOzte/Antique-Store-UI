@@ -53,22 +53,22 @@ const RecentItem = () => {
     });
 
     return (
-        <div class="recent-item">
-            <div class="image-container">
+        <div className="recent-item">
+            <div className="image-container">
                 <img id="image1" src="" />
             </div>
 
-            <div class="datas">
+            <div className="datas">
                 <h3 id="title1"></h3>
                 <p id="description1"></p>
             </div>
-            <div class="price-action">
+            <div className="price-action">
                 <h1 id="price1"></h1>
                 <button>View Details</button>
             </div>
-            <div class="recent-footer">
+            <div className="recent-footer">
                 <h6 id="bids1"></h6>
-                <h6 id="date1" class="bidding-time"></h6>
+                <h6 id="date1" className="bidding-time"></h6>
             </div>
         </div>
     );

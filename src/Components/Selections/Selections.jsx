@@ -106,7 +106,7 @@ const Selections = () => {
                 />
             </div>
 
-            <div class="button">
+            <div className="button">
                 <img src={search} />
                 <button>Search</button>
             </div>

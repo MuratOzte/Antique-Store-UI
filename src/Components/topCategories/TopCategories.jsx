@@ -54,9 +54,9 @@ const categories = [
 
 const TopCategories = () => {
     return (
-        <div class="top-categories">
+        <div className="top-categories">
             <TopCategoriesHeader />
-            <div class="top-categories-cards">
+            <div className="top-categories-cards">
                 {categories.map((category, index) => (
                     <CategoriesCard
                         key={index}

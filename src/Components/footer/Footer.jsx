@@ -7,8 +7,8 @@ import twitter from '../../assets/social/twitter.svg';
 const Footer = () => {
     return (
         <footer>
-            <div class="links">
-                <div class="resources">
+            <div className="links">
+                <div className="resources">
                     <h1>Resources</h1>
                     <ul>
                         <li>Download</li>
@@ -17,7 +17,7 @@ const Footer = () => {
                         <li>App Directory</li>
                     </ul>
                 </div>
-                <div class="seboria">
+                <div className="seboria">
                     <h1>Seboria</h1>
                     <ul>
                         <li>Why seboria</li>
@@ -26,7 +26,7 @@ const Footer = () => {
                         <li>Instagram Post</li>
                     </ul>
                 </div>
-                <div class="Company">
+                <div className="Company">
                     <h1>Company</h1>
                     <ul>
                         <li>Antiques</li>
@@ -35,19 +35,19 @@ const Footer = () => {
                         <li>Information</li>
                     </ul>
                 </div>
-                <div class="get-in-touch">
+                <div className="get-in-touch">
                     <h1>Get In Touch</h1>
                     <p>Feel free to get in touch with us via email</p>
                     <h4>shakir260@gmail.com</h4>
                 </div>
             </div>
-            <div class="end-section">
-                <div class="logo">
+            <div className="end-section">
+                <div className="logo">
                     <h1>
                         Siboria<span>.</span>
                     </h1>
                 </div>
-                <div class="footer-nav">
+                <div className="footer-nav">
                     <ul>
                         <li>Home</li>
                         <li>Collection</li>
@@ -56,7 +56,7 @@ const Footer = () => {
                         <li>Blog</li>
                     </ul>
                 </div>
-                <div class="social-media">
+                <div className="social-media">
                     <img src={facebook} />
                     <img src={instagram} />
                     <img src={twitter} />

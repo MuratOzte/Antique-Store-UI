@@ -1,12 +1,16 @@
 import './TopCategories.scss';
 
 const CategorieCard = ({ cardName, badge, title, dealer, img }) => {
+    title == 'statues' ? console.log(title) : '';
     return (
-        <div class={cardName}>
-            <div class="badge">{badge}</div>
-            <p class="category-title">{title}</p>
-            <p class="category-dealer">{dealer}</p>
-            <img src={img} />
+        <div className={cardName}>
+            <div className="badge">{badge}</div>
+            <p className="category-title">{title}</p>
+            <p className="category-dealer">{dealer}</p>
+            <img
+                src={img}
+                className={`${title == 'Statues' ? 'statue' : ''}`}
+            />
         </div>
     );
 };

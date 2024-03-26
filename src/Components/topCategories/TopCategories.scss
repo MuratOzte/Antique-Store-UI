@@ -8,12 +8,17 @@ $gray-text: #989898;
     align-items: stretch;
     margin-left: 5%;
     margin-right: 5%;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 2%;
+        margin-right: 0;
+    }
+
     h1 {
         font-size: 3rem;
         @media screen and (max-width: 768px) {
             font-size: 2rem;
             overflow: visible;
-            width: max-content;
             margin: 0;
             margin-left: 5%;
             margin-right: 5%;
@@ -141,7 +146,7 @@ $gray-text: #989898;
         .statue {
             height: 90%;
             @media screen and (max-width: 768px) {
-                height: 80%;
+                height: 90%;
             }
         }
     }
@@ -153,16 +158,21 @@ $gray-text: #989898;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             margin-bottom: 2rem;
-            width: 80%;
+            width: 100%;
             transform: translateX(-5%);
         }
         .top-categories-texts {
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
             p {
                 color: $gray-text;
                 @media screen and (max-width: 768px) {
                     margin-right: 5%;
                     margin-left: 5%;
+                    display: flex;
                 }
             }
         }
