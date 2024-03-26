@@ -10,54 +10,27 @@ import Footer from './Components/footer/Footer';
 
 function App() {
     return (
-        <div
-            style={{
-                scrollSnapType: 'y mandatory',
-                width: '100%',
-                height: '100vh',
-                overflowY: 'scroll',
-            }}
-        >
-            <div
-                style={{
-                    scrollSnapAlign: 'center',
-                    scrollSnapStop: 'always',
-                    height: '100vh',
-                    width: '100%',
-                }}
-            >
+        <div style={containerStyle}>
+            <div style={containerItem}>
                 <Nav />
                 <MobileLinks />
                 <Hero />
             </div>
             <div
                 style={{
-                    scrollSnapAlign: 'center',
-                    scrollSnapStop: 'always',
-                    height: '100vh',
-                    width: '100%',
+                    ...containerItem,
                     paddingTop: '2px',
                 }}
             >
                 <Selections />
                 <RecentlyAdded />
             </div>
-            <div
-                style={{
-                    scrollSnapAlign: 'center',
-                    scrollSnapStop: 'always',
-                    height: '100vh',
-                    width: '100%',
-                }}
-            >
+            <div style={containerItem}>
                 <TopCategories />
             </div>
             <div
                 style={{
-                    scrollSnapAlign: 'center',
-                    scrollSnapStop: 'always',
-                    height: '100vh',
-                    width: '100%',
+                    ...containerItem,
                     display: 'flex',
                     justifyContent: 'center',
                 }}
@@ -66,9 +39,7 @@ function App() {
             </div>
             <div
                 style={{
-                    scrollSnapAlign: 'center',
-                    scrollSnapStop: 'always',
-                    width: '100%',
+                    ...containerItem,
                     paddingTop: '16px',
                 }}
             >
@@ -78,5 +49,19 @@ function App() {
         </div>
     );
 }
+
+const containerStyle = {
+    scrollSnapType: 'y mandatory',
+    width: '100%',
+    height: '100vh',
+    overflowY: 'scroll',
+};
+
+const containerItem = {
+    scrollSnapAlign: 'center',
+    scrollSnapStop: 'always',
+    height: '100vh',
+    width: '100%',
+};
 
 export default App;
