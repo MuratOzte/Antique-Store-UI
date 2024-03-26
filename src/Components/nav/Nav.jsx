@@ -1,15 +1,19 @@
 import './Nav.scss';
 
-const Nav = () => {
+const Nav = ({ setIsMenuOpen, isMenuOpen }) => {
+    const handleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <nav>
             <a>
                 Siboria<span>.</span>
             </a>
-            <div className="menu">
-                <span className="line1"></span>
-                <span className="line2"></span>
-                <span className="line3"></span>
+            <div className="menu" onClick={handleMenu}>
+                <span className={`line1 ${isMenuOpen ? 'active' : ''}`}></span>
+                <span className={`line2 ${isMenuOpen ? 'active' : ''}`}></span>
+                <span className={`line3 ${isMenuOpen ? 'active' : ''}`}></span>
             </div>
             <ul>
                 <li>

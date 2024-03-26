@@ -8,12 +8,16 @@ import FeedBack from './Components/feedback/Feedback';
 import Subscribe from './Components/subscribe/Subscribe';
 import Footer from './Components/footer/Footer';
 
+import { useState } from 'react';
+
 function App() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <div style={containerStyle}>
             <div style={containerItem}>
-                <Nav />
-                <MobileLinks />
+                <Nav setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+                {isMenuOpen && <MobileLinks />}
                 <Hero />
             </div>
             <div
