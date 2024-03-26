@@ -11,7 +11,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transform: scaleY(.9);
+    transform: scaleY(0.9);
     margin-top: 1rem;
     @include margin-x(10%);
     @media screen and (max-width: 768px) {
@@ -86,8 +86,11 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-
+        .logo{
+            h1{
+                margin: 0;
+            }
+        }
         ul {
             list-style: none;
             display: flex;

@@ -68,7 +68,6 @@ function App() {
                 style={{
                     scrollSnapAlign: 'center',
                     scrollSnapStop: 'always',
-                    height: '100vh',
                     width: '100%',
                     paddingTop: '16px',
                 }}
