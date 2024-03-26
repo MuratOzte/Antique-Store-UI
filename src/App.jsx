@@ -9,6 +9,7 @@ import Subscribe from './Components/subscribe/Subscribe';
 import Footer from './Components/footer/Footer';
 
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,9 @@ function App() {
         <div style={containerStyle}>
             <div style={containerItem}>
                 <Nav setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
-                {isMenuOpen && <MobileLinks />}
+                <AnimatePresence>
+                    {isMenuOpen && <MobileLinks />}
+                </AnimatePresence>
                 <Hero />
             </div>
             <div
