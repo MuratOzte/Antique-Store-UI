@@ -1,0 +1,111 @@
+$gray-text: #949494;
+$nav-prime-color: #212832;
+$nav-second-color: #ff8032;
+
+@mixin margin-x($x) {
+    margin-left: $x;
+    margin-right: $x;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scaleY(.9);
+    @include margin-x(10%);
+    @media screen and (max-width: 768px) {
+        @include margin-x(5%);
+    }
+
+    h1 {
+        font-size: 48px;
+        color: $nav-prime-color;
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
+        span {
+            color: $nav-second-color;
+        }
+    }
+
+    .active {
+        border: 2px solid $nav-second-color;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        h1 {
+            font-size: 24px;
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                text-align: left;
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0.2rem;
+            @media screen and (max-width: 768px) {
+                font-size: 10px;
+                text-align: left;
+            }
+            li {
+                margin: 1rem 0;
+                color: $gray-text;
+                cursor: pointer;
+                @media screen and (max-width: 768px) {
+                }
+            }
+        }
+
+        .get-in-touch {
+            @media screen and (max-width: 768px) {
+                width: 25%;
+            }
+            p {
+                margin: 2rem 0;
+                color: $gray-text;
+                @media screen and (max-width: 768px) {
+                    font-size: 10px;
+                    margin: 2rem 0 1rem 0;
+                }
+            }
+            h4 {
+                font-size: 24px;
+                color: #00b2ff;
+                cursor: pointer;
+                @media screen and (max-width: 768px) {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    .end-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+            li {
+                color: $gray-text;
+                cursor: pointer;
+            }
+        }
+        .social-media {
+            display: flex;
+            gap: 1.5rem;
+            img {
+                color: $gray-text;
+                cursor: pointer;
+            }
+        }
+    }
+}

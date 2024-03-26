@@ -5,6 +5,8 @@ import Selections from './Components/Selections/Selections';
 import RecentlyAdded from './Components/RecentlyAdded/RecentlyAdded';
 import TopCategories from './Components/topCategories/TopCategories';
 import FeedBack from './Components/feedback/Feedback';
+import Subscribe from './Components/subscribe/Subscribe';
+import Footer from './Components/footer/Footer';
 
 function App() {
     return (
@@ -56,6 +58,8 @@ function App() {
                     scrollSnapStop: 'always',
                     height: '100vh',
                     width: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
                 }}
             >
                 <FeedBack />
@@ -66,9 +70,11 @@ function App() {
                     scrollSnapStop: 'always',
                     height: '100vh',
                     width: '100%',
+                    paddingTop: '16px',
                 }}
             >
-                <h1>Hello, World!</h1>
+                <Subscribe />
+                <Footer />
             </div>
             <div
                 style={{
