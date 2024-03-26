@@ -76,25 +76,6 @@ function App() {
                 <Subscribe />
                 <Footer />
             </div>
-            <div
-                style={{
-                    scrollSnapAlign: 'center',
-                    scrollSnapStop: 'always',
-                    height: '100vh',
-                    width: '100%',
-                }}
-            >
-                <h1>Hello, World!</h1>
-            </div>
-            <div
-                style={{
-                    scrollSnapAlign: 'center',
-                    scrollSnapStop: 'always',
-                    height: '100vh',
-                }}
-            >
-                <h1>Hello, World!</h1>
-            </div>
         </div>
     );
 }

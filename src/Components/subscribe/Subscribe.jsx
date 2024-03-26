@@ -1,5 +1,8 @@
 import './Subscribe.scss';
 
+import gramaphone from '../../assets/subscribe/gramophone.svg';
+import send from '../../assets/subscribe/send.svg';
+
 const Subscribe = () => {
     return (
         <div class="subscribe">
@@ -12,12 +15,12 @@ const Subscribe = () => {
                 <div class="custom-input">
                     <input type="text" placeholder="Enter Your email adress" />
                     <div class="send-button">
-                        <img src="assets/subscribe/send.svg" alt="send" />
+                        <img src={send} alt="send" />
                     </div>
                 </div>
             </div>
             <div class="image-section">
-                <img src="assets/subscribe/gramophone.svg" />
+                <img src={gramaphone} />
             </div>
         </div>
     );

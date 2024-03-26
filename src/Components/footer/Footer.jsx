@@ -1,5 +1,9 @@
 import './Footer.scss';
 
+import facebook from '../../assets/social/facebook.svg';
+import instagram from '../../assets/social/instagram.svg';
+import twitter from '../../assets/social/twitter.svg';
+
 const Footer = () => {
     return (
         <footer>
@@ -53,9 +57,9 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div class="social-media">
-                    <img src="assets/social/facebook.svg" />
-                    <img src="assets/social/instagram.svg" />
-                    <img src="assets/social/twitter.svg" />
+                    <img src={facebook} />
+                    <img src={instagram} />
+                    <img src={twitter} />
                 </div>
             </div>
         </footer>

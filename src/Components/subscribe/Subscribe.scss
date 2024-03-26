@@ -14,6 +14,7 @@ $gray-text: #989898;
     justify-content: space-between;
     @include margin-x(10%);
     padding: 2rem;
+    margin-top: 3rem;
     border-radius: 1.5rem;
     @media screen and (max-width: 768px) {
         padding: 2rem 1rem 2rem 1rem;
@@ -22,6 +23,7 @@ $gray-text: #989898;
     .text-section {
         color: white;
         margin-left: 3rem;
+        width: 100%;
         z-index: 100;
 
         @media screen and (max-width: 768px) {

@@ -12,6 +12,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     transform: scaleY(.9);
+    margin-top: 1rem;
     @include margin-x(10%);
     @media screen and (max-width: 768px) {
         @include margin-x(5%);
