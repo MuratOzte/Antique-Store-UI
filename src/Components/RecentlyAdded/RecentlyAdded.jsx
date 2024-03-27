@@ -5,6 +5,7 @@ import skull from '../../assets/recently-added/skull.svg';
 import table from '../../assets/recently-added/table.svg';
 
 import $ from 'jquery';
+import { useRef } from 'react';
 
 const RecentlyAdded = () => {
     const recentlyAddeds = [
@@ -49,11 +50,40 @@ const RecentlyAdded = () => {
         }
     });
 
+    const item1 = useRef(null);
+    const item2 = useRef(null);
+    const item3 = useRef(null);
+    const recentItems = useRef(null);
+
+    const buttonClickHandler = () => {
+        const container = recentItems.current;
+        const scrollAmount = item1.current.offsetWidth + 20;
+        const scrollDuration = 500;
+
+        const startTime = performance.now();
+        const startScrollLeft = container.scrollLeft;
+        const endTime = startTime + scrollDuration;
+
+        function scrollStep(timestamp) {
+            const currentTime = Math.min(timestamp, endTime);
+            const elapsed = currentTime - startTime;
+            const scrollRatio = elapsed / scrollDuration;
+            container.scrollLeft = startScrollLeft + scrollRatio * scrollAmount;
+
+            if (currentTime < endTime) {
+                requestAnimationFrame(scrollStep);
+            }
+        }
+
+        requestAnimationFrame(scrollStep);
+    };
+
     return (
         <div className="recently-added-section">
             <RecentlyAddedHeader />
-            <div className="recent-items">
-                <div className="recent-item">
+            <button onClick={buttonClickHandler}>Test</button>
+            <div className="recent-items" ref={recentItems}>
+                <div className="recent-item" ref={item1}>
                     <div className="image-container">
                         <img id="image1" src="" />
                     </div>
@@ -71,7 +101,7 @@ const RecentlyAdded = () => {
                         <h6 id="date1" className="bidding-time"></h6>
                     </div>
                 </div>
-                <div className="recent-item">
+                <div className="recent-item" ref={item2}>
                     <div className="image-container">
                         <img id="image2" src="" />
                     </div>
@@ -89,7 +119,7 @@ const RecentlyAdded = () => {
                         <h6 id="date2" className="bidding-time"></h6>
                     </div>
                 </div>
-                <div className="recent-item">
+                <div className="recent-item" ref={item3}>
                     <div className="image-container">
                         <img id="image3" src="" />
                     </div>

@@ -59,6 +59,8 @@ $blue: #0cb6ff;
         flex-direction: row;
         justify-content: space-between;
         height: 90%;
+        transition: all 0.3s ease-in-out;
+
         @media screen and (max-width: 768px) {
             overflow-x: scroll;
             gap: 2rem;
