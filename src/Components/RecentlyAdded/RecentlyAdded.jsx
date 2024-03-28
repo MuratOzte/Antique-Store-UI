@@ -55,7 +55,7 @@ const RecentlyAdded = () => {
     const item3 = useRef(null);
     const recentItems = useRef(null);
 
-    const buttonClickHandler = () => {
+    const buttonClickHandler = (direction) => {
         const container = recentItems.current;
         const scrollAmount = item1.current.offsetWidth + 20;
         const scrollDuration = 500;
@@ -64,11 +64,18 @@ const RecentlyAdded = () => {
         const startScrollLeft = container.scrollLeft;
         const endTime = startTime + scrollDuration;
 
+        const scrollTarget =
+            direction === 'left'
+                ? Math.max(startScrollLeft - scrollAmount, 0)
+                : startScrollLeft + scrollAmount;
+
         function scrollStep(timestamp) {
             const currentTime = Math.min(timestamp, endTime);
             const elapsed = currentTime - startTime;
             const scrollRatio = elapsed / scrollDuration;
-            container.scrollLeft = startScrollLeft + scrollRatio * scrollAmount;
+            container.scrollLeft =
+                startScrollLeft +
+                scrollRatio * (scrollTarget - startScrollLeft);
 
             if (currentTime < endTime) {
                 requestAnimationFrame(scrollStep);
@@ -78,10 +85,19 @@ const RecentlyAdded = () => {
         requestAnimationFrame(scrollStep);
     };
 
+    const prevButtonHandler = () => {
+        buttonClickHandler('left');
+    };
+    const nextButtonHandler = () => {
+        buttonClickHandler('right');
+    };
+
     return (
         <div className="recently-added-section">
-            <RecentlyAddedHeader />
-            <button onClick={buttonClickHandler}>Test</button>
+            <RecentlyAddedHeader
+                prevButtonHandler={prevButtonHandler}
+                nextButtonHandler={nextButtonHandler}
+            />
             <div className="recent-items" ref={recentItems}>
                 <div className="recent-item" ref={item1}>
                     <div className="image-container">
