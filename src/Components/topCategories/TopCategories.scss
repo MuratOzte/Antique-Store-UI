@@ -42,7 +42,7 @@ $gray-text: #989898;
             width: calc(100% - 2rem);
             grid-gap: 2% 11%;
             grid-template-columns: auto auto;
-            grid-template-rows: auto auto auto auto auto;
+            grid-template-rows: auto auto auto auto ;
             height: 180vh;
         }
         .card {
@@ -124,6 +124,9 @@ $gray-text: #989898;
             left: 10px;
             font-weight: bold;
             z-index: 100;
+            @media screen and (max-width: 768px){
+                font-size: 1.5rem;
+            }
         }
         .category-dealer {
             position: absolute;
@@ -135,18 +138,21 @@ $gray-text: #989898;
         img {
             position: absolute;
             top: 15px;
-            right: 40px;
+            right: 20%;
             height: 80%;
             filter: contrast(0.7) brightness(1.2);
             @media screen and (max-width: 768px) {
-                right: 5%;
-                height: 65%;
+                right: 7%;
+                height: 60%;
+                font-size: 1.5rem;
             }
         }
         .statue {
             height: 90%;
             @media screen and (max-width: 768px) {
-                height: 90%;
+                position: absolute;
+                top: 10%;
+                height: 70%;
             }
         }
     }
