@@ -1,8 +1,13 @@
-# React + Vite
+# Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A user-friendly , responsive UI design for an antique e-commerce website
 
-Currently, two official plugins are available:
+# Tecnologies
+[![My Skills](https://skillicons.dev/icons?i=react,sass,&theme=light)](https://skillicons.dev)
 
-[![My Skills](https://skillicons.dev/icons?i=java,kotlin,nodejs,figma&theme=light)](https://skillicons.dev)
+# Live Website
+To see the project live, you can click [here](https://antiquestore-silk.vercel.app/).
+
+
+
 
